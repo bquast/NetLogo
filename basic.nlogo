@@ -8,6 +8,13 @@ to go
   move-turtles
   tick
 end
+
+to move-turtles
+  ask turtles [
+    right random 360
+    forward 1
+  ]
+end
 @#$#@#$#@
 GRAPHICS-WINDOW
 210
