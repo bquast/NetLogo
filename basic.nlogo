@@ -46,7 +46,7 @@ to reproduce
   ask turtles [
     if energy > 50 [
       set energy energy - 50
-      hatch 1 [ set energy 50
+      hatch 1 [ set energy 50 ]
       ]
     ]
 end
