@@ -5,12 +5,13 @@ to setup
   reset-ticks
 end
 
-turtles-own [ energy ]
+turtles-own [ energy age ]
 
 to go
   move-turtles
   eat-grass
   reproduce
+  age-turtles
   check-death
   regrow-grass
   tick
@@ -21,7 +22,10 @@ to setup-patches
 end
 
 to setup-turtles
-  create-turtles population [ setxy random-xcor random-ycor ]
+  create-turtles population
+   [ setxy random-xcor random-ycor
+     set age random lifespan
+   ]
 end
 
 to move-turtles
@@ -48,14 +52,22 @@ to reproduce
   ask turtles [
     if energy > birth-energy [
       set energy energy - birth-energy
+      set age 1
       hatch 1 [ set energy birth-energy ]
       ]
     ]
 end
 
+to age-turtles
+  ask turtles [
+    set age age + 1
+  ]
+end
+
 to check-death
   ask turtles [
     if energy <= 0 [ die ]
+    if age >= lifespan [ die ]
   ]
 end
 
@@ -157,7 +169,7 @@ population
 population
 0
 1000
-50
+200
 1
 1
 NIL
@@ -222,6 +234,21 @@ false
 PENS
 "turtles" 1.0 0 -16777216 true "" "plot count turtles"
 "grass" 1.0 0 -14439633 true "" "plot count patches with [ pcolor = green ]"
+
+SLIDER
+12
+436
+184
+469
+lifespan
+lifespan
+0
+100
+30
+1
+1
+NIL
+HORIZONTAL
 
 @#$#@#$#@
 ## WHAT IS IT?
