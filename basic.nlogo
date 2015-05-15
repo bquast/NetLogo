@@ -121,6 +121,17 @@ count patches with [pcolor = green]
 1
 11
 
+SWITCH
+6
+214
+161
+247
+show-energy?
+show-energy?
+1
+1
+-1000
+
 @#$#@#$#@
 ## WHAT IS IT?
 
