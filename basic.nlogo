@@ -159,6 +159,25 @@ show-energy?
 1
 -1000
 
+PLOT
+6
+272
+206
+422
+Totals
+time
+totals
+0.0
+10.0
+0.0
+10.0
+true
+false
+"" ""
+PENS
+"turtles" 1.0 0 -16777216 true "" "plot count turtles"
+"grass" 1.0 0 -7500403 true "" "plot count patches with [ pcolor = green ]"
+
 @#$#@#$#@
 ## WHAT IS IT?
 
