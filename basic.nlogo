@@ -3,6 +3,11 @@ to setup
   create-turtles 100 [ setxy random-xcor random-ycor ]
   reset-ticks
 end
+
+to go
+  move-turtles
+  tick
+end
 @#$#@#$#@
 GRAPHICS-WINDOW
 210
