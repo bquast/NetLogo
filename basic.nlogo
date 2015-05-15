@@ -100,9 +100,9 @@ NIL
 1
 
 MONITOR
-8
+6
 91
-104
+100
 136
 NIL
 count turtles
@@ -111,9 +111,9 @@ count turtles
 11
 
 MONITOR
-14
+6
 150
-122
+100
 195
 green patches
 count patches with [pcolor = green]
