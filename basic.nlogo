@@ -21,7 +21,7 @@ to setup-patches
 end
 
 to setup-turtles
-  create-turtles 100 [ setxy random-xcor random-ycor ]
+  create-turtles number [ setxy random-xcor random-ycor ]
 end
 
 to move-turtles
@@ -177,6 +177,21 @@ false
 PENS
 "turtles" 1.0 0 -16777216 true "" "plot count turtles"
 "grass" 1.0 0 -14439633 true "" "plot count patches with [ pcolor = green ]"
+
+SLIDER
+7
+437
+179
+470
+number
+number
+0
+1000
+50
+1
+1
+NIL
+HORIZONTAL
 
 @#$#@#$#@
 ## WHAT IS IT?
