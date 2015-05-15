@@ -210,10 +210,10 @@ NIL
 HORIZONTAL
 
 SLIDER
-12
-436
-184
-469
+10
+229
+200
+262
 lifespan
 lifespan
 0
@@ -226,9 +226,9 @@ HORIZONTAL
 
 SWITCH
 10
-229
+272
 200
-262
+305
 show-energy?
 show-energy?
 0
@@ -237,9 +237,9 @@ show-energy?
 
 PLOT
 10
-272
+315
 200
-422
+465
 Totals
 time
 totals
