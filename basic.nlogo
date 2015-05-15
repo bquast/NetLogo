@@ -99,6 +99,28 @@ NIL
 NIL
 1
 
+MONITOR
+8
+91
+104
+136
+NIL
+count turtles
+17
+1
+11
+
+MONITOR
+14
+150
+122
+195
+green patches
+count patches with [pcolor = green]
+3
+1
+11
+
 @#$#@#$#@
 ## WHAT IS IT?
 
