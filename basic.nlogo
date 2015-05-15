@@ -5,6 +5,8 @@ to setup
   reset-ticks
 end
 
+turtles-own [ energy ]
+
 to go
   move-turtles
   tick
