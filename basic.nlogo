@@ -11,6 +11,7 @@ to go
   move-turtles
   eat-grass
   reproduce
+  check-death
   tick
 end
 
@@ -49,6 +50,12 @@ to reproduce
       hatch 1 [ set energy 50 ]
       ]
     ]
+end
+
+to check-death
+  ask turtles [
+    if energy <= 0 [ die ]
+  ]
 end
 @#$#@#$#@
 GRAPHICS-WINDOW
