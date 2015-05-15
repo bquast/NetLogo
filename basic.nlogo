@@ -1,3 +1,8 @@
+to setup
+  clear-all
+  create-turtles 100 [ setxy random-xcor random-ycor ]
+  reset-ticks
+end
 @#$#@#$#@
 GRAPHICS-WINDOW
 210
@@ -25,6 +30,23 @@ GRAPHICS-WINDOW
 1
 ticks
 30.0
+
+BUTTON
+6
+17
+79
+50
+NIL
+setup
+NIL
+1
+T
+OBSERVER
+NIL
+NIL
+NIL
+NIL
+1
 
 @#$#@#$#@
 ## WHAT IS IT?
