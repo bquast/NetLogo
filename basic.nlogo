@@ -9,6 +9,7 @@ turtles-own [ energy ]
 
 to go
   move-turtles
+  eat-grass
   tick
 end
 
@@ -24,6 +25,15 @@ to move-turtles
   ask turtles [
     right random 360
     forward 1
+  ]
+end
+
+to eat-grass
+  ask turtles [
+    if pcolor = green [
+      set pcolor black
+      set energy energy + 10
+    ]
   ]
 end
 @#$#@#$#@
