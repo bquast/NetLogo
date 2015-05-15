@@ -21,7 +21,7 @@ to setup-patches
 end
 
 to setup-turtles
-  create-turtles number [ setxy random-xcor random-ycor ]
+  create-turtles population [ setxy random-xcor random-ycor ]
 end
 
 to move-turtles
@@ -36,7 +36,7 @@ to eat-grass
   ask turtles [
     if pcolor = green [
       set pcolor black
-      set energy energy + 10
+      set energy energy + grass-energy
     ]
     ifelse show-energy?
     [ set label energy ]
@@ -148,6 +148,36 @@ count patches with [pcolor = green]
 1
 11
 
+SLIDER
+10
+100
+200
+133
+population
+population
+0
+1000
+50
+1
+1
+NIL
+HORIZONTAL
+
+SLIDER
+10
+150
+200
+183
+grass-energy
+grass-energy
+0
+50
+10
+1
+1
+NIL
+HORIZONTAL
+
 SWITCH
 6
 214
@@ -177,21 +207,6 @@ false
 PENS
 "turtles" 1.0 0 -16777216 true "" "plot count turtles"
 "grass" 1.0 0 -14439633 true "" "plot count patches with [ pcolor = green ]"
-
-SLIDER
-7
-437
-179
-470
-number
-number
-0
-1000
-50
-1
-1
-NIL
-HORIZONTAL
 
 @#$#@#$#@
 ## WHAT IS IT?
