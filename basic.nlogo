@@ -25,6 +25,7 @@ to move-turtles
   ask turtles [
     right random 360
     forward 1
+    set energy energy - 1
   ]
 end
 
