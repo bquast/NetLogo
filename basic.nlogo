@@ -96,7 +96,7 @@ BUTTON
 10
 10
 100
-40
+43
 NIL
 setup
 NIL
@@ -113,7 +113,7 @@ BUTTON
 110
 10
 200
-40
+43
 NIL
 go
 T
@@ -127,10 +127,10 @@ NIL
 1
 
 MONITOR
-6
-91
+10
+50
 100
-136
+95
 NIL
 count turtles
 17
@@ -138,10 +138,10 @@ count turtles
 11
 
 MONITOR
-6
-150
-100
-195
+110
+50
+200
+95
 green patches
 count patches with [pcolor = green]
 3
