@@ -62,9 +62,9 @@ NIL
 
 BUTTON
 96
-19
+17
 159
-52
+50
 NIL
 go
 NIL
