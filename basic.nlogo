@@ -10,6 +10,7 @@ turtles-own [ energy ]
 to go
   move-turtles
   eat-grass
+  reproduce
   tick
 end
 
@@ -39,6 +40,15 @@ to eat-grass
     [ set label energy ]
     [ set label "" ]
   ]
+end
+
+to reproduce
+  ask turtles [
+    if energy > 50 [
+      set energy energy - 50
+      hatch 1 [ set energy 50
+      ]
+    ]
 end
 @#$#@#$#@
 GRAPHICS-WINDOW
@@ -131,7 +141,7 @@ SWITCH
 247
 show-energy?
 show-energy?
-1
+0
 1
 -1000
 
