@@ -5,7 +5,11 @@ to setup
   reset-ticks
 end
 
-turtles-own [ energy age ]
+turtles-own [ 
+  parent
+  energy
+  age
+  ]
 
 to go
   move-turtles
@@ -205,6 +209,21 @@ birth-energy
 NIL
 HORIZONTAL
 
+SLIDER
+12
+436
+184
+469
+lifespan
+lifespan
+0
+100
+30
+1
+1
+NIL
+HORIZONTAL
+
 SWITCH
 10
 229
@@ -234,21 +253,6 @@ false
 PENS
 "turtles" 1.0 0 -16777216 true "" "plot count turtles"
 "grass" 1.0 0 -14439633 true "" "plot count patches with [ pcolor = green ]"
-
-SLIDER
-12
-436
-184
-469
-lifespan
-lifespan
-0
-100
-30
-1
-1
-NIL
-HORIZONTAL
 
 @#$#@#$#@
 ## WHAT IS IT?
