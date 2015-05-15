@@ -1,5 +1,6 @@
 to setup
   clear-all
+  setup-patches
   create-turtles 100 [ setxy random-xcor random-ycor ]
   reset-ticks
 end
@@ -7,6 +8,10 @@ end
 to go
   move-turtles
   tick
+end
+
+to setup-patches
+  ask patches [ set pcolor green ]
 end
 
 to move-turtles
