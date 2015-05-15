@@ -35,6 +35,9 @@ to eat-grass
       set pcolor black
       set energy energy + 10
     ]
+    ifelse show-energy?
+    [ set label energy ]
+    [ set label "" ]
   ]
 end
 @#$#@#$#@
