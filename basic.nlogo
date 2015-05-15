@@ -46,9 +46,9 @@ end
 
 to reproduce
   ask turtles [
-    if energy > 50 [
-      set energy energy - 50
-      hatch 1 [ set energy 50 ]
+    if energy > birth-energy [
+      set energy energy - birth-energy
+      hatch 1 [ set energy birth-energy ]
       ]
     ]
 end
@@ -165,9 +165,9 @@ HORIZONTAL
 
 SLIDER
 10
-150
+143
 200
-183
+176
 grass-energy
 grass-energy
 0
@@ -178,11 +178,26 @@ grass-energy
 NIL
 HORIZONTAL
 
+SLIDER
+10
+186
+200
+219
+birth-energy
+birth-energy
+0
+100
+50
+1
+1
+NIL
+HORIZONTAL
+
 SWITCH
-6
-214
-161
-247
+10
+229
+200
+262
 show-energy?
 show-energy?
 0
@@ -190,9 +205,9 @@ show-energy?
 -1000
 
 PLOT
-6
+10
 272
-206
+200
 422
 Totals
 time
