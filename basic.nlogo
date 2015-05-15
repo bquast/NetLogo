@@ -12,6 +12,7 @@ to go
   eat-grass
   reproduce
   check-death
+  regrow-grass
   tick
 end
 
@@ -55,6 +56,12 @@ end
 to check-death
   ask turtles [
     if energy <= 0 [ die ]
+  ]
+end
+
+to regrow-grass
+  ask patches [
+    if random 100 < 3 [ set pcolor green ]
   ]
 end
 @#$#@#$#@
