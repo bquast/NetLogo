@@ -13,6 +13,7 @@ turtles-own [
   ]
 
 to go
+  if not any? turtles [ stop ]
   move-turtles
   eat-grass
   reproduce
