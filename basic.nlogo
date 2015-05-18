@@ -1,4 +1,4 @@
-directed-link-breed [ mommy-links mommy ] 
+directed-link-breed [ parent-links parent ] 
 
 to setup
   clear-all
@@ -61,7 +61,7 @@ to reproduce
       set age 1
       hatch 1 [ 
         set energy birth-energy
-        create-mommy-to myself
+        create-parent-to myself
         ]
       ]
     ]
