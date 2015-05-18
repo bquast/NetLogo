@@ -258,7 +258,7 @@ false
 PENS
 "turtles" 1.0 0 -16777216 true "" "plot count turtles"
 "grass" 1.0 0 -14439633 true "" "plot count patches with [ pcolor = green ]"
-"pen-2" 1.0 0 -7500403 true "" "plot count mommy-links"
+"parents" 1.0 0 -955883 true "" "plot count parent-links"
 
 @#$#@#$#@
 ## WHAT IS IT?
