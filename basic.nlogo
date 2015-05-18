@@ -1,4 +1,4 @@
-directed-link-breed [ parent-links parent ] 
+directed-link-breed [ mommy-links mommy ] 
 
 to setup
   clear-all
@@ -8,7 +8,6 @@ to setup
 end
 
 turtles-own [ 
-  parent
   energy
   age
   ]
@@ -61,7 +60,7 @@ to reproduce
       set age 1
       hatch 1 [ 
         set energy birth-energy
-        one-of out-parent-neighbors
+        create-mommy-to myself
         ]
       ]
     ]
@@ -258,6 +257,7 @@ false
 PENS
 "turtles" 1.0 0 -16777216 true "" "plot count turtles"
 "grass" 1.0 0 -14439633 true "" "plot count patches with [ pcolor = green ]"
+"pen-2" 1.0 0 -7500403 true "" "plot count mommy-links"
 
 @#$#@#$#@
 ## WHAT IS IT?
