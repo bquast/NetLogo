@@ -235,7 +235,7 @@ SWITCH
 305
 show-energy?
 show-energy?
-0
+1
 1
 -1000
 
