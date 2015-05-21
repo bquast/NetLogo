@@ -2,7 +2,7 @@ directed-link-breed [ parent-links parent ]
 
 to setup
   clear-all
-  set-default-shape turtles "sheep"
+  set-default-shape turtles "person"
   setup-patches
   setup-turtles
   reset-ticks
@@ -25,7 +25,7 @@ to go
 end
 
 to setup-patches
-  ask patches [ set pcolor green ]
+  ask patches [ set pcolor yellow ]
 end
 
 to setup-turtles
@@ -45,7 +45,7 @@ end
 
 to eat-grass
   ask turtles [
-    if pcolor = green [
+    if pcolor = yellow [
       set pcolor brown
       set energy energy + grass-energy
     ]
@@ -80,7 +80,7 @@ end
 
 to regrow-grass
   ask patches [
-    if random 100 < 3 [ set pcolor green ]
+    if random 100 < 3 [ set pcolor yellow ]
   ]
 end
 @#$#@#$#@
