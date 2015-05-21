@@ -18,19 +18,13 @@ to go
   move-turtles
   eat-grass
   reproduce
-  transfer-energy
-  age-turtles
+  educate-child
+  feed-parent
   check-death
   regrow-grass
   tick
 end
 
-to transfer-energy
-  ask turtles [
-    show count out-parent-neighbors ; parent
-    show count in-parent-neighbors  ; children
-  ]
-end
 
 to setup-patches
   ask patches [ set pcolor green ]
@@ -71,6 +65,20 @@ to reproduce
         ]
       ]
     ]
+end
+
+to educate-child
+  ; if energy > 20
+  ; if age > 15 (possibly not necessary
+  ; set energy energy - 10
+  ; set status of child to power-sheep
+end
+
+to feed-parent
+  ask turtles [
+    show count out-parent-neighbors ; parent
+    show count in-parent-neighbors  ; children
+  ]
 end
 
 to age-turtles
@@ -609,7 +617,7 @@ Polygon -7500403 true true 270 75 225 30 30 225 75 270
 Polygon -7500403 true true 30 75 75 30 270 225 225 270
 
 @#$#@#$#@
-NetLogo 5.2.0
+NetLogo 5.1.0
 @#$#@#$#@
 @#$#@#$#@
 @#$#@#$#@
