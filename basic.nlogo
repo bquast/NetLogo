@@ -48,9 +48,6 @@ to eat-grass
       set pcolor black
       set energy energy + grass-energy
     ]
-    ifelse show-energy?
-    [ set label energy ]
-    [ set label "" ]
   ]
 end
 
@@ -229,22 +226,22 @@ lifespan
 NIL
 HORIZONTAL
 
-SWITCH
+MONITOR
 10
 272
-200
-305
-show-energy?
-show-energy?
+100
+317
+parents
+count parent-links
+0
 1
-1
--1000
+11
 
 PLOT
 10
-315
+327
 200
-465
+470
 Totals
 time
 totals
@@ -259,6 +256,7 @@ PENS
 "turtles" 1.0 0 -16777216 true "" "plot count turtles"
 "grass" 1.0 0 -14439633 true "" "plot count patches with [ pcolor = green ]"
 "parents" 1.0 0 -955883 true "" "plot count parent-links"
+
 
 @#$#@#$#@
 ## WHAT IS IT?
@@ -603,7 +601,7 @@ Polygon -7500403 true true 270 75 225 30 30 225 75 270
 Polygon -7500403 true true 30 75 75 30 270 225 225 270
 
 @#$#@#$#@
-NetLogo 5.1.0
+NetLogo 5.2.0
 @#$#@#$#@
 @#$#@#$#@
 @#$#@#$#@
