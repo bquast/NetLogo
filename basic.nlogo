@@ -16,11 +16,13 @@ sheep-own [
   ]
 
 to go
-  if not any? sheep [ stop ]
-  move-sheep
+  if not any? turtles [ stop ]
+  move-turtles
+  move-power-sheep
+  eat-grass
+  move-power-sheep
   eat-grass
   reproduce
-  educate-child
   feed-parent
   check-death
   regrow-grass
@@ -40,8 +42,8 @@ to setup-sheep
    ]
 end
 
-to move-sheep
-  ask sheep [
+to move-turtles
+  ask turtles [
     right random 360
     forward 1
     set energy energy - 1
@@ -49,11 +51,19 @@ to move-sheep
 end
 
 to eat-grass
-  ask sheep [
+  ask turtles [
     if pcolor = green [
       set pcolor brown
       set energy energy + grass-energy
     ]
+  ]
+end
+
+to move-power-sheep
+    ask power-sheep [
+    right random 360
+    forward 1
+    set energy energy - 1
   ]
 end
 
@@ -68,13 +78,6 @@ to reproduce
         ]
       ]
     ]
-end
-
-to educate-child
-  ; if energy > 20
-  ; if age > 15 (possibly not necessary
-  ; set energy energy - 10
-  ; set status of child to power-sheep
 end
 
 to feed-parent
