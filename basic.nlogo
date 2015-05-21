@@ -18,7 +18,6 @@ turtles-own [
 to go
   if not any? turtles [ stop ]
   move-turtles
-  move-power-sheep
   eat-grass
   move-power-sheep
   eat-grass
@@ -224,7 +223,7 @@ grass-energy
 grass-energy
 0
 50
-10
+23
 1
 1
 NIL
@@ -310,7 +309,7 @@ SWITCH
 511
 lifespan?
 lifespan?
-0
+1
 1
 -1000
 
