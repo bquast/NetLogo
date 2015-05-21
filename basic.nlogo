@@ -6,11 +6,11 @@ to setup
   clear-all
   set-default-shape sheep "sheep"
   setup-patches
-  setup-sheep
+  setup-turtles
   reset-ticks
 end
 
-sheep-own [ 
+turtles-own [ 
   energy
   age
   ]
@@ -33,8 +33,8 @@ to setup-patches
   ask patches [ set pcolor green ]
 end
 
-to setup-sheep
-  create-sheep population
+to setup-turtles
+  create-turtles population
    [ setxy random-xcor random-ycor
      set color white
      set age random lifespan
@@ -53,7 +53,7 @@ to eat-grass
   ask turtles [
     if pcolor = green [
       set pcolor brown
-      set energy energy + grass-energy
+      set energy energy + grass-energy + random 20
     ]
   ]
 end
@@ -67,7 +67,16 @@ to move-power-sheep
 end
 
 to reproduce
-  ask sheep [
+  ask turtles [
+    if energy > power-birth-energy [
+      set energy energy - power-birth-energy
+      set age 1
+      hatch-power-sheep 1 [
+        set energy birth-energy
+        set color red
+        create-parent-to myself
+      ]
+    ]
     if energy > birth-energy [
       set energy energy - birth-energy
       set age 1
@@ -244,7 +253,7 @@ lifespan
 lifespan
 0
 100
-30
+14
 1
 1
 NIL
