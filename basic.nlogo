@@ -76,8 +76,8 @@ end
 
 to feed-parent
   ask turtles [
-    show count out-parent-neighbors ; parent
-    show count in-parent-neighbors  ; children
+    ; show count out-parent-neighbors ; parent
+    ; show count in-parent-neighbors  ; children
   ]
 end
 
