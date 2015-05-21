@@ -168,7 +168,7 @@ MONITOR
 50
 100
 95
-NIL
+turtles
 count turtles
 17
 1
