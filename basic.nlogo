@@ -29,7 +29,6 @@ to go
   tick
 end
 
-
 to setup-patches
   ask patches [ set pcolor green ]
 end
@@ -230,7 +229,7 @@ birth-energy
 birth-energy
 0
 100
-70
+30
 1
 1
 NIL
@@ -292,6 +291,21 @@ lifespan?
 0
 1
 -1000
+
+SLIDER
+133
+481
+305
+514
+power-birth-energy
+power-birth-energy
+0
+100
+50
+1
+1
+NIL
+HORIZONTAL
 
 @#$#@#$#@
 ## POWER-SHEEP AND THE PIGGY-BANK
