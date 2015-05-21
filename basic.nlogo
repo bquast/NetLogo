@@ -19,8 +19,6 @@ to go
   if not any? turtles [ stop ]
   move-turtles
   eat-grass
-  move-power-sheep
-  eat-grass
   reproduce
   feed-parent
   age-turtles
@@ -53,16 +51,8 @@ to eat-grass
   ask turtles [
     if pcolor = green [
       set pcolor brown
-      set energy energy + grass-energy ;+ random 20
+      set energy energy + grass-energy
     ]
-  ]
-end
-
-to move-power-sheep
-    ask power-sheep [
-    right random 360
-    forward 1
-    set energy energy - 1
   ]
 end
 
@@ -82,6 +72,7 @@ to reproduce
       hatch-sheep 1 [ 
         set age 1
         set energy birth-energy
+        set color white
         create-parent-to myself
         ]
       ]
@@ -92,6 +83,11 @@ to feed-parent
   ask turtles [
     ; show count out-parent-neighbors ; parent
     ; show count in-parent-neighbors  ; children
+    
+    ; (send-to-parent / 100  ) * energy
+    ; signal energy to parent
+    ; decrease energy by amount send
+    ; increase energy by amount received from ALL children
   ]
 end
 
@@ -167,7 +163,7 @@ BUTTON
 43
 NIL
 go
-T
+NIL
 1
 T
 OBSERVER
@@ -223,7 +219,7 @@ grass-energy
 grass-energy
 0
 50
-23
+22
 1
 1
 NIL
@@ -323,6 +319,36 @@ power-birth-energy
 0
 100
 70
+1
+1
+NIL
+HORIZONTAL
+
+SLIDER
+320
+483
+492
+516
+send-to-parent
+send-to-parent
+0
+100
+50
+1
+1
+NIL
+HORIZONTAL
+
+SLIDER
+499
+482
+671
+515
+power-efficiency
+power-efficiency
+0
+1000
+50
 1
 1
 NIL
