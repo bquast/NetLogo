@@ -46,7 +46,7 @@ end
 to eat-grass
   ask turtles [
     if pcolor = green [
-      set pcolor black
+      set pcolor brown
       set energy energy + grass-energy
     ]
   ]
