@@ -4,7 +4,7 @@ directed-link-breed [ parent-links parent ]
 
 to setup
   clear-all
-  set-default-shape sheep "sheep"
+  set-default-shape turtles "sheep"
   setup-patches
   setup-turtles
   reset-ticks
@@ -54,7 +54,7 @@ to eat-grass
   ask turtles [
     if pcolor = green [
       set pcolor brown
-      set energy energy + grass-energy + random 20
+      set energy energy + grass-energy ;+ random 20
     ]
   ]
 end
@@ -71,8 +71,8 @@ to reproduce
   ask turtles [
     if energy > power-birth-energy [
       set energy energy - power-birth-energy
-      set age 1
       hatch-power-sheep 1 [
+        set age 1
         set energy birth-energy
         set color red
         create-parent-to myself
@@ -80,8 +80,8 @@ to reproduce
     ]
     if energy > birth-energy [
       set energy energy - birth-energy
-      set age 1
-      hatch 1 [ 
+      hatch-sheep 1 [ 
+        set age 1
         set energy birth-energy
         create-parent-to myself
         ]
@@ -183,8 +183,8 @@ MONITOR
 50
 100
 95
-turtles
-count turtles
+parents
+count parent-links
 17
 1
 11
@@ -265,8 +265,19 @@ MONITOR
 272
 100
 317
-parents
-count parent-links
+sheep
+count sheep
+0
+1
+11
+
+MONITOR
+110
+272
+200
+317
+power-sheep
+count power-sheep
 0
 1
 11
