@@ -1,21 +1,23 @@
-directed-link-breed [ parent-links parent ] 
+breed [sheep a-sheep]
+breed [power-sheep a-power-sheep]
+directed-link-breed [ parent-links parent ]
 
 to setup
   clear-all
-  set-default-shape turtles "person"
+  set-default-shape sheep "sheep"
   setup-patches
-  setup-turtles
+  setup-sheep
   reset-ticks
 end
 
-turtles-own [ 
+sheep-own [ 
   energy
   age
   ]
 
 to go
-  if not any? turtles [ stop ]
-  move-turtles
+  if not any? sheep [ stop ]
+  move-sheep
   eat-grass
   reproduce
   educate-child
@@ -30,15 +32,15 @@ to setup-patches
   ask patches [ set pcolor green ]
 end
 
-to setup-turtles
-  create-turtles population
+to setup-sheep
+  create-sheep population
    [ setxy random-xcor random-ycor
      set age random lifespan
    ]
 end
 
-to move-turtles
-  ask turtles [
+to move-sheep
+  ask sheep [
     right random 360
     forward 1
     set energy energy - 1
@@ -46,7 +48,7 @@ to move-turtles
 end
 
 to eat-grass
-  ask turtles [
+  ask sheep [
     if pcolor = green [
       set pcolor brown
       set energy energy + grass-energy
@@ -55,7 +57,7 @@ to eat-grass
 end
 
 to reproduce
-  ask turtles [
+  ask sheep [
     if energy > birth-energy [
       set energy energy - birth-energy
       set age 1
@@ -75,20 +77,20 @@ to educate-child
 end
 
 to feed-parent
-  ask turtles [
+  ask sheep [
     ; show count out-parent-neighbors ; parent
     ; show count in-parent-neighbors  ; children
   ]
 end
 
-to age-turtles
-  ask turtles [
+to age-sheep
+  ask sheep [
     set age age + 1
   ]
 end
 
 to check-death
-  ask turtles [
+  ask sheep [
     if energy <= 0 [ die ]
     if age >= lifespan [ die ]
   ]
