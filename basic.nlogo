@@ -2,6 +2,7 @@ directed-link-breed [ parent-links parent ]
 
 to setup
   clear-all
+  set-default-shape turtles "sheep"
   setup-patches
   setup-turtles
   reset-ticks
@@ -256,7 +257,6 @@ PENS
 "turtles" 1.0 0 -16777216 true "" "plot count turtles"
 "grass" 1.0 0 -14439633 true "" "plot count patches with [ pcolor = green ]"
 "parents" 1.0 0 -955883 true "" "plot count parent-links"
-
 
 @#$#@#$#@
 ## WHAT IS IT?
