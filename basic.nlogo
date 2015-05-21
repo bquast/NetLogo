@@ -24,6 +24,7 @@ to go
   eat-grass
   reproduce
   feed-parent
+  age-turtles
   check-death
   regrow-grass
   tick
@@ -95,14 +96,14 @@ to feed-parent
   ]
 end
 
-to age-sheep
+to age-turtles
   ask sheep [
     set age age + 1
   ]
 end
 
 to check-death
-  ask sheep [
+  ask turtles [
     if energy <= 0 [ die ]
     if lifespan? [
       if age >= lifespan [ die ]
@@ -238,7 +239,7 @@ birth-energy
 birth-energy
 0
 100
-30
+50
 1
 1
 NIL
@@ -286,9 +287,10 @@ true
 false
 "" ""
 PENS
-"turtles" 1.0 0 -16777216 true "" "plot count turtles"
 "grass" 1.0 0 -14439633 true "" "plot count patches with [ pcolor = green ]"
-"parents" 1.0 0 -955883 true "" "plot count parent-links"
+"parents" 1.0 0 -13345367 true "" "plot count parent-links"
+"sheep" 1.0 0 -16777216 true "" "plot count sheep"
+"power-sheep" 1.0 0 -2674135 true "" "plot count power-sheep"
 
 SWITCH
 11
@@ -310,7 +312,7 @@ power-birth-energy
 power-birth-energy
 0
 100
-50
+70
 1
 1
 NIL
