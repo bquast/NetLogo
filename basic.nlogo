@@ -275,9 +275,9 @@ PENS
 "parents" 1.0 0 -955883 true "" "plot count parent-links"
 
 @#$#@#$#@
-## WHAT IS IT?
+## POWER-SHEEP AND THE PIGGY-BANK
 
-(a general understanding of what the model is trying to show or explain)
+Sheep breed new sheep, they can choose to forego additional energy and create power-sheep. Power sheep are more efficient and can make two moves (in stead of one) per tick. Sheep share a part of their energy with their parents (if they are still alive).
 
 ## HOW IT WORKS
 
