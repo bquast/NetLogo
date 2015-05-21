@@ -89,14 +89,14 @@ to reproduce
 end
 
 to feed-parent
-  ask sheep [
+  ask turtles [
     ; show count out-parent-neighbors ; parent
     ; show count in-parent-neighbors  ; children
   ]
 end
 
 to age-turtles
-  ask sheep [
+  ask turtles [
     set age age + 1
   ]
 end
@@ -112,7 +112,7 @@ end
 
 to regrow-grass
   ask patches [
-    if random 100 < 3 [ set pcolor green ]
+    if random 100 < 5 [ set pcolor green ]
   ]
 end
 @#$#@#$#@
@@ -309,7 +309,7 @@ SWITCH
 511
 lifespan?
 lifespan?
-1
+0
 1
 -1000
 
