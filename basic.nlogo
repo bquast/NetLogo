@@ -35,6 +35,7 @@ end
 to setup-sheep
   create-sheep population
    [ setxy random-xcor random-ycor
+     set color white
      set age random lifespan
    ]
 end
@@ -92,7 +93,9 @@ end
 to check-death
   ask sheep [
     if energy <= 0 [ die ]
-    if age >= lifespan [ die ]
+    if lifespan? [
+      if age >= lifespan [ die ]
+    ]
   ]
 end
 
@@ -275,6 +278,17 @@ PENS
 "turtles" 1.0 0 -16777216 true "" "plot count turtles"
 "grass" 1.0 0 -14439633 true "" "plot count patches with [ pcolor = green ]"
 "parents" 1.0 0 -955883 true "" "plot count parent-links"
+
+SWITCH
+11
+478
+115
+511
+lifespan?
+lifespan?
+0
+1
+-1000
 
 @#$#@#$#@
 ## POWER-SHEEP AND THE PIGGY-BANK
