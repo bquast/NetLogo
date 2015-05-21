@@ -18,14 +18,22 @@ to go
   move-turtles
   eat-grass
   reproduce
+  transfer-energy
   age-turtles
   check-death
   regrow-grass
   tick
 end
 
+to transfer-energy
+  ask turtles [
+    show count out-parent-neighbors ; parent
+    show count in-parent-neighbors  ; children
+  ]
+end
+
 to setup-patches
-  ask patches [ set pcolor yellow ]
+  ask patches [ set pcolor green ]
 end
 
 to setup-turtles
@@ -45,7 +53,7 @@ end
 
 to eat-grass
   ask turtles [
-    if pcolor = yellow [
+    if pcolor = green [
       set pcolor brown
       set energy energy + grass-energy
     ]
@@ -80,7 +88,7 @@ end
 
 to regrow-grass
   ask patches [
-    if random 100 < 3 [ set pcolor yellow ]
+    if random 100 < 3 [ set pcolor green ]
   ]
 end
 @#$#@#$#@
@@ -206,7 +214,7 @@ birth-energy
 birth-energy
 0
 100
-50
+70
 1
 1
 NIL
