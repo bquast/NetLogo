@@ -279,6 +279,8 @@ PENS
 
 Sheep breed new sheep, they can choose to forego additional energy and create power-sheep. Power sheep are more efficient and can make two moves (in stead of one) per tick. Sheep share a part of their energy with their parents (if they are still alive).
 
+Any positive holdings are saved in the Piggy-bank (a non-spatial mediation entity). Sheep with insufficient income can borrow money from the bank (up to a limit).
+
 ## HOW IT WORKS
 
 (what rules the agents use to create the overall behavior of the model)
